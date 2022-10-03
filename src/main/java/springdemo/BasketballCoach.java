@@ -1,13 +1,18 @@
 package springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BasketballCoach implements Coach{
-   FortuneService fortuneService;
+   @Value("${abc.team}")
+    private String team;
+
+    FortuneService fortuneService;
     @Autowired
-    public BasketballCoach(FortuneService fortuneService) {
+    public BasketballCoach(@Qualifier("randomFortuneFromFile") FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
@@ -18,6 +23,9 @@ public class BasketballCoach implements Coach{
 
     @Override
     public String getDailyFortune() {
-        return "Today is your lucky day!";
+        return fortuneService.getFortune();
+    }
+    public String getTeam() {
+        return team;
     }
 }
