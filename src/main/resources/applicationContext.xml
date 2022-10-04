@@ -11,7 +11,3 @@
     <context:component-scan base-package="springdemo"/>
     <context:property-placeholder location="application.properties"/>
 </beans>
-
-
-
-
