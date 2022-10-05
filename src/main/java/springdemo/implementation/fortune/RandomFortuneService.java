@@ -1,6 +1,7 @@
-package springdemo;
+package springdemo.implementation.fortune;
 
 import org.springframework.stereotype.Component;
+import springdemo.interfaces.FortuneService;
 
 import java.util.Random;
 

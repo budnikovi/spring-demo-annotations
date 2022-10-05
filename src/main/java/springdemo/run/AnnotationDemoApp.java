@@ -1,6 +1,8 @@
-package springdemo;
+package springdemo.run;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import springdemo.implementation.coach.BasketballCoach;
+import springdemo.interfaces.Coach;
 
 public class AnnotationDemoApp {
     public static void main(String[] args) {

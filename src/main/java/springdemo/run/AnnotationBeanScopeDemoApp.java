@@ -1,6 +1,7 @@
-package springdemo;
+package springdemo.run;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import springdemo.interfaces.Coach;
 
 public class AnnotationBeanScopeDemoApp {
     public static void main(String[] args) {

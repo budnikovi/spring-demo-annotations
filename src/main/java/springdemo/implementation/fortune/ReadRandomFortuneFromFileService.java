@@ -1,14 +1,15 @@
-package springdemo;
+package springdemo.implementation.fortune;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import springdemo.interfaces.FortuneService;
 
 import javax.annotation.PostConstruct;
 import java.util.Random;
 @Component
 @Qualifier("randomFortuneFromFile")
-public class ReadRandomFortuneFromFileService implements FortuneService{
+public class ReadRandomFortuneFromFileService implements FortuneService {
     @Value("${arrayOfRandomStrings}")
     private String[] array;
     @Value("${greeting}")

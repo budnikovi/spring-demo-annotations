@@ -1,19 +1,21 @@
-package springdemo;
+package springdemo.implementation.coach;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import springdemo.interfaces.Coach;
+import springdemo.interfaces.FortuneService;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
 @Scope("singleton")
-public class TennisCoach implements Coach{
+public class TennisCoach implements Coach {
     @Autowired
     @Qualifier("randomFortuneService")
-    private  FortuneService fortuneService;
+    private FortuneService fortuneService;
 
     public TennisCoach() {
         System.out.println(">> TennisCoach: inside default constructor");

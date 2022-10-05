@@ -1,12 +1,14 @@
-package springdemo;
+package springdemo.implementation.coach;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import springdemo.interfaces.Coach;
+import springdemo.interfaces.FortuneService;
 
 @Component
-public class BasketballCoach implements Coach{
+public class BasketballCoach implements Coach {
    @Value("${abc.team}")
     private String team;
 
